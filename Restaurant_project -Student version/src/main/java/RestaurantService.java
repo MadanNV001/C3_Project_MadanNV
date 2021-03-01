@@ -32,5 +32,10 @@ public class RestaurantService {
         return restaurants;
     }
 
-    
+
+    public Receipt totalCost(String itemName, double price, int quantity) {
+        Receipt receipt= new Receipt(itemName,price,quantity);
+        receipt.totalPrice += (price * quantity);
+        return receipt;
     }
+}
