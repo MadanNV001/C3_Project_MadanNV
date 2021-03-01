@@ -66,5 +66,14 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //requirements
+    //select the food
+    //add the cost
+    @Test
+    public void Select_the_Food_item_and_find__total_cost_of_the_order(){
+        Receipt receipt =service.totalCost("Vegetable lasagne", 269,1);
+        assertEquals(269,receipt.getPrice());
+        assertNotNull(receipt);
 
+    }
 }
